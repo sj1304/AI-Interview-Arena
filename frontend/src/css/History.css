@@ -1,0 +1,147 @@
+/* History.css */
+
+.history-page {
+  min-height: 100vh;
+  padding: 40px;
+  margin-left: 260px;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(0, 255, 255, 0.08),
+      transparent 30%),
+    radial-gradient(circle at bottom right,
+      rgba(0, 255, 255, 0.05),
+      transparent 25%),
+    #020817;
+
+  color: white;
+}
+
+.history-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+
+.history-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* History Card */
+
+.history-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.history-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(0, 245, 255, 0.4);
+
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.2),
+    0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.history-card h3 {
+  color: #00f5ff;
+  margin-bottom: 15px;
+}
+
+.history-card p {
+  margin: 8px 0;
+  color: #cbd5e1;
+}
+
+/* Result Badge */
+
+.result {
+  display: inline-block;
+
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  margin-top: 10px;
+}
+
+.result.won {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.result.lost {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+/* Stats */
+
+.stats-container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+}
+
+.stat-card h2 {
+  color: #00f5ff;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  color: #94a3b8;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .history-page {
+    margin-left: 0;
+    padding: 90px 20px 20px;
+  }
+
+  .history-container {
+    grid-template-columns: 1fr;
+  }
+}

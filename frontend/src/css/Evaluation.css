@@ -1,0 +1,176 @@
+.evaluation-container {
+  min-height: 100vh;
+ 
+  padding: 40px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0,255,255,.08),
+      transparent 30%
+    ),
+    #020817;
+
+  display: grid;
+  grid-template-columns:
+    1fr 2fr 1fr;
+
+  gap: 25px;
+
+  color: white;
+}
+
+.home-btn-area{
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
+.home-btn-area .next-btn{
+    padding:15px 60px;
+    font-size: 20px;
+}
+.left-panel,
+.summary-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.winner-card,
+.stats-card,
+.summary-card,
+.good-card,
+.improve-card,
+.feedback-card,
+.comparison-panel {
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  backdrop-filter: blur(10px);
+}
+
+.winner-card h1 {
+  color: #ffb703;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.score-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.score-box h3 {
+  color: #00f5ff;
+  font-size: 2rem;
+}
+
+.stats-card {
+  display: grid;
+  grid-template-columns:
+    repeat(2,1fr);
+  gap: 15px;
+}
+
+.stats-card div {
+  text-align: center;
+}
+
+.stats-card p {
+  color: #00f5ff;
+}
+
+.comparison-panel h2 {
+  margin-bottom: 20px;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns:
+    3fr 1fr 1fr 1fr 80px;
+
+  align-items: center;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+
+  background:
+    rgba(255,255,255,.03);
+}
+
+.comparison-row button {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  background: #00f5ff;
+  color: black;
+  cursor: pointer;
+}
+
+.answer-modal {
+  margin-top: 25px;
+}
+
+.answer-box {
+  margin-top: 15px;
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,.03);
+}
+
+.good-card {
+  border-left:
+    4px solid #22c55e;
+}
+
+.improve-card {
+  border-left:
+    4px solid #ef4444;
+}
+
+.feedback-card {
+  border-left:
+    4px solid #00f5ff;
+}
+
+.battle-score {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.battle-score h3 {
+  color: #00f5ff;
+  font-size: 2rem;
+}
+
+@media(max-width:768px){
+
+  .evaluation-container{
+    margin-left:0;
+    padding:90px 20px 20px;
+
+    grid-template-columns:1fr;
+  }
+
+  .comparison-row{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+}

@@ -1,0 +1,190 @@
+/* InterviewArena.css */
+
+.outer {
+  min-height: 100vh;
+  padding: 40px;
+  margin-left: 260px;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(0, 255, 255, 0.08),
+      transparent 30%),
+    radial-gradient(circle at bottom right,
+      rgba(0, 255, 255, 0.05),
+      transparent 25%),
+    #020817;
+
+  color: white;
+}
+
+.outer h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.outer h3 {
+  margin-bottom: 20px;
+  color: #00f5ff;
+  font-weight: 600;
+}
+
+/* Topic & Difficulty Container */
+
+.topics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.topic-card .icon{
+  font-size: 1.3rem;
+}
+.topic-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  padding:12px;
+
+  text-align: center;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover */
+
+.topic-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(0, 245, 255, 0.4);
+
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.2),
+    0 10px 30px rgba(0, 0, 0, 0.3);
+
+  color: #00f5ff;
+}
+
+/* Selected Card */
+
+.topic-card.selected {
+  background: rgba(0, 245, 255, 0.12);
+
+  border: 2px solid #00f5ff;
+
+  color: #00f5ff;
+
+  box-shadow:
+    0 0 25px rgba(0, 245, 255, 0.35);
+}
+
+/* Start Button */
+
+.start-btn {
+  display: block;
+
+  margin: 30px auto;
+
+  padding: 15px 35px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #00f5ff,
+    #00bcd4
+  );
+
+  color: #02111f;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.35);
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 30px rgba(0, 245, 255, 0.5);
+}
+
+.start-btn:disabled {
+  cursor: not-allowed;
+
+  background: #334155;
+
+  color: #94a3b8;
+
+  box-shadow: none;
+}
+
+/* Selected Summary */
+
+.selection-info {
+  text-align: center;
+
+  margin-top: 20px;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .outer {
+    margin-left: 0;
+    padding: 90px 20px 20px;
+  }
+
+  .outer h2 {
+    font-size: 1.6rem;
+  }
+
+  .topics-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .topic-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .topics-container {
+    grid-template-columns: 1fr;
+  }
+
+  .start-btn {
+    width: 100%;
+  }
+}
